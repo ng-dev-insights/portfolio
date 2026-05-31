@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+  background: var(--cinema-black);
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--cinema-black);
+  color: var(--cinema-white);
+}
+
+/* Film grain overlay — fixed, non-interactive, adds photographic texture */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove any default user agent styles that might interfere */
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure smooth font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Chapter accent color utilities */
+.chapter-builder { --chapter-color: var(--chapter-builder); }
+.chapter-solver { --chapter-color: var(--chapter-solver); }
+.chapter-architect { --chapter-color: var(--chapter-architect); }
+.chapter-multiplier { --chapter-color: var(--chapter-multiplier); }
+.chapter-mentor { --chapter-color: var(--chapter-mentor); }
+.chapter-explorer { --chapter-color: var(--chapter-explorer); }

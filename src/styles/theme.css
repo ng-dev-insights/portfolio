@@ -142,6 +142,46 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* Dark theme — explicit class for auto mode switching */
+.dark {
+  --cinema-black: #0B0B0B;
+  --cinema-surface: #141414;
+  --cinema-surface-alt: #0D0D0D;
+  --cinema-white: #F5F5F5;
+  --cinema-muted: #B0B0B0;
+  --cinema-border: #2D2D2D;
+  --cinema-accent: #D7D2C8;
+
+  --chapter-builder: #C8A96E;
+  --chapter-solver: #7A9E8E;
+  --chapter-architect: #8FA3B8;
+  --chapter-multiplier: #B8992A;
+  --chapter-mentor: #B89E8F;
+  --chapter-explorer: #9B9EC8;
+
+  --background: var(--cinema-black);
+  --foreground: var(--cinema-white);
+  --card: var(--cinema-surface);
+  --card-foreground: var(--cinema-white);
+  --popover: var(--cinema-surface);
+  --popover-foreground: var(--cinema-white);
+  --primary: var(--cinema-white);
+  --primary-foreground: var(--cinema-black);
+  --secondary: var(--cinema-surface);
+  --secondary-foreground: var(--cinema-white);
+  --muted: var(--cinema-surface);
+  --muted-foreground: var(--cinema-muted);
+  --accent: var(--cinema-accent);
+  --accent-foreground: var(--cinema-black);
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: var(--cinema-border);
+  --input: transparent;
+  --input-background: var(--cinema-surface);
+  --switch-background: var(--cinema-border);
+  --ring: var(--cinema-accent);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
